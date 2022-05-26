@@ -1,16 +1,15 @@
+import { Link } from 'react-router-dom';
+// import '../css/main.css';
 import usericon from '../img/usericon.png';
-import '../css/main.css';
 
 function Main() {
   return (
     <div className="Main">
       <header>
-        <div>
-          <ul id="login">
-            <li><a href="client.html">로그인</a></li>
-            <li><img src={usericon} alt="usericon"/></li>
-          </ul>
-        </div>
+        <ul id="login">
+          <li><Link to={'/borrow'}>로그인</Link></li>
+          <li><img src={usericon} alt="usericon"/></li>
+        </ul>
       </header>
       <section id="main">
         <h1>&#128366;SHELF-ER</h1>
@@ -21,5 +20,4 @@ function Main() {
     </div>
   );
 }
-
 export default Main;
