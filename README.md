@@ -1,5 +1,5 @@
 # User_page
-SHELF-ER 사용자 페이지(user-page)
+SHELF-ER의 사용자 페이지
 with React.js
 
 # Getting Started with Create React App
