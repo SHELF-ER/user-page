@@ -1,5 +1,5 @@
-// import '../css/common.css';
-// import '../css/borrow.css';
+import '../css/common.css';
+import '../css/borrow.css';
 import homeicon from '../img/homeicon.png';
 import loginicon from '../img/loginicon.png';
 import searchicon from '../img/searchicon.png';
@@ -7,7 +7,7 @@ import searchicon from '../img/searchicon.png';
 function Borrow() {
   return (
     <div className="Borrow">
-      <header>
+      <header className="common">
         <div id="subtitle">
           <h2>전자책</h2>
         </div>

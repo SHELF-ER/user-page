@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
-import '../css/main.css';
+import maincss from '../css/main.module.css';
 import usericon from '../img/usericon.png';
 
 function Main() {
   return (
     <div className="Main">
       <header>
-        <ul id="login">
+        <ul className={maincss.login}>
           <li><Link to={'/borrow'}>로그인</Link></li>
           <li><img src={usericon} alt="usericon"/></li>
         </ul>
       </header>
-      <section id="main">
+      <section className={maincss.main}>
         <h1>&#128366;SHELF-ER</h1>
         <h3>로그인이 필요합니다. ID카드를 태그해주세요.</h3>
         <li class="selected"><a href="start.html">대  출</a></li>

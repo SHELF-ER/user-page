@@ -54,7 +54,7 @@ html {
 /* 초기화 끝 */
 /* header 시작 */
 
-header {
+header.common {
     width: 980px;
     height: 49.1px;
     margin: 37px 0;
