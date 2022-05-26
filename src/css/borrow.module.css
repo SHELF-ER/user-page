@@ -2,21 +2,24 @@
 /* borrow의 css */
 /* content 시작 */
 
-#content {
+.content {
     float: left;
     display: block;
     width: 700px;
     margin-left: 38px;
 }
 
-#content h1 { font-size: 25px;}
-#content hr {
+.content h1 {
+    font-size: 25px;
+    text-align: left;
+}
+.content hr {
     width: 100px;
     margin: 3px 0;
 }
 
-#findlist { margin-top: 20px; }
-#findlist select {
+.findlist { margin-top: 20px; }
+.findlist select {
     margin-left: 5px;
     padding: 0 10px;
     width: 140px;
@@ -28,7 +31,7 @@
     color: #404040;
 }
 
-#searchbar {
+.searchbar {
     display: inline-block;
     margin-left: 5px;
     width: 385px;
@@ -38,7 +41,7 @@
     background-color: white;
 }
 
-#searchbar input {
+.searchbar input {
     width: 325px;
     height: 40px;
     padding: 0 10px;
@@ -47,7 +50,7 @@
     color: #404040;
 }
 
-#findlist button {
+.findlist button {
     display: inline;
     float: right;
     width: 40px;
@@ -57,16 +60,16 @@
     border-radius: 0;
 }
 
-#searchbtn:hover {
+.searchbtn:hover {
     background-color: #efefef38;
 }
 
-#searchbtn img {
+.searchbtn img {
     width: 20px;
     height: 20px;
 }
 
-#result {
+.result {
     height: 50px;
     margin-top: 12px;
     padding: 155px 0;
