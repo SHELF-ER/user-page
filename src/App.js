@@ -1,16 +1,17 @@
-import Main from './js/Main';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './components/Main';
+import Daytest from './components/Daytest'
+import Daylisttest from './components/Daylisttest'
+import EmptyPagetest from './components/EmptyPagetest';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route exact path="/">
-            <Main />
-          </Route>
-        </Switch>
-      </div>
+        <Routes>
+          <Route path="/" element={<Daylisttest />} />
+          <Route path="/day/:day" element={<Daytest />} />
+          <Route element={<EmptyPagetest />} />
+        </Routes>
     </BrowserRouter>
   );
 }
