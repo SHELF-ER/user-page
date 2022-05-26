@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-// import '../css/main.css';
+import '../css/main.css';
 import usericon from '../img/usericon.png';
 
 function Main() {
@@ -20,4 +20,5 @@ function Main() {
     </div>
   );
 }
+
 export default Main;
