@@ -6,7 +6,7 @@ import Client from './components/Client';
 import MyBorrow from './components/MyBorrow';
 import Customertest from './components/Customertest';
 
-const customers = [{
+const customerstest = [{
   'id': 1,
   'image': 'https://placeimg.com/64/64/1',
   'name': '엄기기',
@@ -40,7 +40,7 @@ function App() {
         <Route path="/client" element={<Client />} />
         <Route path="/myborrow" element={<MyBorrow />} />
         <Route path="/customertest" element={
-          customers.map(c => {
+          customerstest.map(c => {
             return (
               <Customertest
                 key={c.id}
