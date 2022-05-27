@@ -7,10 +7,6 @@ class Customertest extends React.Component {
 		  <div className="Customertest">
 				<table>
 					<tr>
-						<th>번호</th><th>이미지</th><th>이름</th>
-						<th>생년월일</th><th>성별</th><th>직업</th>
-					</tr>
-					<tr>
 						<CustomerProfile id={this.props.id} image={this.props.image} name={this.props.name}/>
 						<CustomerInfo birthday={this.props.birthday} gender={this.props.gender} job={this.props.job}/>
 					</tr>
@@ -25,7 +21,7 @@ class CustomerProfile extends React.Component {
 	  return (
 		  <>
 				<td>{this.props.id}</td>
-				<td><img src={this.props.image} alt="profile"/></td>
+				<td><img src={this.props.image} alt="이미지"/></td>
 				<td>{this.props.name}</td>
 		  </>
 	  )
