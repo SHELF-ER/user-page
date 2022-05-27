@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { Link } from 'react-router-dom';
 import maincss from '../css/main.module.css';
 import usericon from '../img/usericon.png';
