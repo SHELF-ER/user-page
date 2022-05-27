@@ -33,8 +33,9 @@ header.common {
     float: left;
     margin: 0;
     margin-left: 30px;
-    padding-top: 13px;
+    padding-top: 3px;
     vertical-align: middle;
+    list-style: 0px;
 }
 
 .topnav li {
@@ -55,6 +56,7 @@ header.common {
 .topnav img {
     width: 24px;
     height: 26px;
+    padding-top: 12px;
 }
 
 .loginnav {
@@ -97,15 +99,9 @@ header.common {
     font-size: 16px;
 }
 
-.menu_01 {
-    margin-top: 16px;
-    background-color: #efefef99;
-}
-.menu_02 { background-color: #efefef99; }
-.menu_03 { background-color: #efefef99; }
-
 .menu_title {
     padding-left: 17px;
+    text-align: left;
     height: 46px;
     line-height: 46px;
     background-color: white;
@@ -117,10 +113,13 @@ header.common {
     background-color: #4266b11c;
 }
 
+.menu_margin { margin-top: 17px; }
+.menu { background-color: #efefef99; }
 .menu ul { padding: 10px 0; }
 .menu li {
     font-size: 14px;
     padding-left: 17px;
+    list-style: none;
 }
 .menu li a:hover { color: #6485cd; }
 

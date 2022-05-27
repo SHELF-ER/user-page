@@ -2,29 +2,33 @@
 /* myborrow의 css */
 /* content 시작 */
 
-#content {
+.content {
     float: left;
     display: block;
     width: 700px;
     margin-left: 38px;
 }
 
-#content h1 { font-size: 25px;}
-#content hr {
+.content h1 {
+    font-size: 25px;
+    text-align: left;
+}
+
+.content hr {
     width: 100px;
     margin: 3px 0;
 }
 
-#loannum {
+.loannum {
     margin-top: 20px;
     display: block;
     float: left;
     font-size: 14px;
     color: #7f7f7f;
 }
-#loannum b { color: #f19d00; }
+.loannum b { color: #f19d00; }
 
-#lateday {
+.lateday {
     display: block;
     float: right;
     width: 356px;
@@ -36,9 +40,9 @@
     text-align: center;
     line-height: 40px;
 }
-#lateday b { color: #f19d00; }
+.lateday b { color: #f19d00; }
 
-#loanbook {
+.loanbook {
     display: block;
     float: left;
     margin-top: 10px;
@@ -46,7 +50,7 @@
     background-color: #efefef;
 }
 
-#loanbook img {
+.loanbook img {
     display: block;
     float: left;
     width: 114px;
@@ -54,34 +58,39 @@
     border: 5px solid #4266b180;
 }
 
-#bookinfo h3 {
+.bookinfo h3 {
     font-size: 17px;
     font-weight: bolder;
-    margin-bottom: 5px;
+    text-align: left;
 }
 
-#bookinfo ul {
+.bookinfo ul {
     display: block;
     float: left;
+    line-height: 15px;
+    height: 15px;
 }
 
-#bookinfo li {
+.bookinfo li {
     display: inline;
     padding: 0 7px;
     font-size: 13px;
     color: #5e5e5e;
-    border-left: 1px solid #5e5e5e;
+    border-left: 1px solid .5e5e5e;
 }
 
-#bookinfo .bdleft {
+.bookinfo .bdleft {
     padding-left: 0;
     border-left: none;
 }
 
-#bookinfo b { color: #f19d00; }
-#bookplot {
-    margin: 5px 0;
+.bookinfo b { color: #f19d00; }
+.bookplot {
+    margin-top: -15px;
+    margin-bottom: 7px;
     font-size: 14px;
+    line-height: 20px;
+    text-align: left;
 }
 
 /* content 끝 */

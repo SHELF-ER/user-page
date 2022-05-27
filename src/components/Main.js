@@ -9,7 +9,7 @@ function Main() {
       <header className={maincss.mainheader}>
         <ul className={maincss.login}>
           <li><Link to={'/borrow'}>로그인</Link></li>
-          <li><img src={usericon} alt="usericon"/></li>
+          <li><Link to={'/borrow'}><img src={usericon} alt="usericon"/></Link></li>
         </ul>
       </header>
       <section className={maincss.main}>

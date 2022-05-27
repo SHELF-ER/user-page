@@ -32,10 +32,10 @@ function Borrow() {
 
       <section>
         <div className={commoncss.left}>
-          <div className={commoncss.menu_01}>
+          <div className={`${commoncss.menu} ${commoncss.menu_margin}`}>
             <Link to={'/borrow'}><div className={commoncss.menu_title}>자료검색</div></Link>
           </div>
-          <div className={commoncss.menu_02}>
+          <div className={commoncss.menu}>
           <Link to={'/'}><div className={commoncss.menu_title}>인기신간</div></Link>
             <ul>
               <li><Link to={'/'}>&#8226; 가정과 생활</Link></li>
@@ -47,11 +47,11 @@ function Borrow() {
               <li><Link to={'/'}>&#8226; 문화예술</Link></li>
             </ul>
           </div>
-          <div className={commoncss.menu_03}>
-            <Link to={'client'}><div className={commoncss.menu_title}>나의 도서관</div></Link>
+          <div className={commoncss.menu}>
+            <Link to={'/client'}><div className={commoncss.menu_title}>나의 도서관</div></Link>
             <ul>
-              <li><Link to={'client'}>&#8226; 내 정보</Link></li>
-              <li><Link to={'myborrow'}>&#8226; 대출 현황</Link></li>
+              <li><Link to={'/client'}>&#8226; 내 정보</Link></li>
+              <li><Link to={'/myborrow'}>&#8226; 대출 현황</Link></li>
             </ul>
           </div>
         </div>
