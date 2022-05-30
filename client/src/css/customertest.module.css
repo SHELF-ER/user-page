@@ -1,0 +1,10 @@
+table, tr, th, td {
+  margin: 1px;
+  padding: 1px;
+  /* border: 1px solid black; */
+}
+tr, td {
+  width: 100px;
+  text-align: center;
+  font-size: 18px;
+}
