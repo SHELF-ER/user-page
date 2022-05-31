@@ -5,6 +5,8 @@ import Borrow from './components/Borrow';
 import Client from './components/Client';
 import MyBorrow from './components/MyBorrow';
 import Customer from './components/Customer';
+import ManagerMain from './components/ManagerMain';
+import Find from './components/Find';
 
 class App extends Component {
 
@@ -65,6 +67,8 @@ class App extends Component {
             </table>
             </div>
           } />
+          <Route path="/managermain" element={<ManagerMain />} />
+          <Route path="/find" element={<Find />} />
         </Routes>
       </BrowserRouter>
     );
