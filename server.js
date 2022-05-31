@@ -12,14 +12,6 @@ app.get('/api/hello', (req, res) => {
 
 app.get('/api/customers', (req, res) => {
 	res.send([
-		{
-      'id': '아이디',
-      'image': '#',
-      'name': '이름',
-      'birthday': '생년월일',
-      'gender': '성별',
-      'job': '직업'
-    },
     {
       'id': 1,
       'image': 'https://placeimg.com/64/64/1',

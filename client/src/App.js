@@ -19,7 +19,8 @@ class App extends Component {
   }
 
   callApi = async () => {
-    const response = await fetch('/api/customers');
+    const config = {headers: {'Accept':'application/json'}}
+    const response = await fetch('/api/customers', config);
     const body = await response.json();
     return body;
   }
@@ -35,14 +36,17 @@ class App extends Component {
           <Route path="/customers" element={
             <div>
               <table>
-                <tr>
-                  <th>번호</th>
-                  <th>이미지</th>
-                  <th>이름</th>
-                  <th>생년월일</th>
-                  <th>성별</th>
-                  <th>직업</th>
-                </tr>
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>이미지</th>
+                    <th>이름</th>
+                    <th>생년월일</th>
+                    <th>성별</th>
+                    <th>직업</th>
+                  </tr>
+                </thead>
+                <tbody>
                 { this.state.customers ? this.state.customers.map(c => {
                   return (
                     <Customer
@@ -56,7 +60,9 @@ class App extends Component {
                     />
                   );
                 }) : <Customer/>
-            } </table>
+              }
+              </tbody>
+            </table>
             </div>
           } />
         </Routes>
