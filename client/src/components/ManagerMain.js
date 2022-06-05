@@ -9,16 +9,15 @@ function Main() {
     <div className="Main">
       <header className={maincss.mainheader}>
         <ul className={maincss.login}>
-          <li><Link to={'/borrow'}>로그인</Link></li>
-          <li><Link to={'/managermain'}>관리자 로그인</Link></li>
+          <li><Link to={'/'}>로그아웃</Link></li>
           <li><Link to={'/borrow'}><img src={usericon} alt="usericon"/></Link></li>
         </ul>
       </header>
       <section className={maincss.main}>
         <h1>&#128366;SHELF-ER</h1>
-        <h3>로그인이 필요합니다. ID카드를 태그해주세요.</h3>
-        <li class={maincss.selected}><a href="start.html">대  출</a></li>
-        <li><a href="find.html">반  납</a></li>
+        <h3>관리자 페이지입니다.</h3>
+        <li class={maincss.selected}><a href="start.html">시  작</a></li>
+        <li><Link to={'/find'}>검  색</Link></li>
       </section>
     </div>
   );

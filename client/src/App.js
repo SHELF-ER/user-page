@@ -4,17 +4,28 @@ import Main from './components/Main';
 import Borrow from './components/Borrow';
 import Client from './components/Client';
 import MyBorrow from './components/MyBorrow';
-import Customertest from './components/Customertest';
+import Customer from './components/Customer';
+import ManagerMain from './components/ManagerMain';
+import Find from './components/Find';
 
 class App extends Component {
 
-  // state = {
-  //   customerstest: ""
-  // }
+  state = {
+    customers: ""
+  }
 
-  // componentDidMount() {
-    
-  // }
+  componentDidMount() {
+    this.callApi()
+      .then(res => this.setState({customers: res}))
+      .catch(err => console.log(err));
+  }
+
+  callApi = async () => {
+    const config = {headers: {'Accept':'application/json'}}
+    const response = await fetch('/api/customers', config);
+    const body = await response.json();
+    return body;
+  }
 
   render() {
     return (
@@ -24,21 +35,40 @@ class App extends Component {
           <Route path="/borrow" element={<Borrow />} />
           <Route path="/client" element={<Client />} />
           <Route path="/myborrow" element={<MyBorrow />} />
-          {/* <Route path="/customertest" element={
-            customerstest.map(c => {
-              return (
-                <Customertest
-                  key={c.id}
-                  id={c.id}
-                  image={c.image}
-                  name={c.name}
-                  birthday={c.birthday}
-                  gender={c.gender}
-                  job={c.job}
-                />
-              );
-            })
-          } /> */}
+          <Route path="/customers" element={
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>이미지</th>
+                    <th>이름</th>
+                    <th>생년월일</th>
+                    <th>성별</th>
+                    <th>직업</th>
+                  </tr>
+                </thead>
+                <tbody>
+                { this.state.customers ? this.state.customers.map(c => {
+                  return (
+                    <Customer
+                      key={c.id}
+                      id={c.id}
+                      image={c.image}
+                      name={c.name}
+                      birthday={c.birthday}
+                      gender={c.gender}
+                      job={c.job}
+                    />
+                  );
+                }) : <Customer/>
+              }
+              </tbody>
+            </table>
+            </div>
+          } />
+          <Route path="/managermain" element={<ManagerMain />} />
+          <Route path="/find" element={<Find />} />
         </Routes>
       </BrowserRouter>
     );
