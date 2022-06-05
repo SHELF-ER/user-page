@@ -8,13 +8,13 @@ import Customertest from './components/Customertest';
 
 class App extends Component {
 
-  state = {
-    customerstest: ""
-  }
+  // state = {
+  //   customerstest: ""
+  // }
 
-  componentDidMount() {
+  // componentDidMount() {
     
-  }
+  // }
 
   render() {
     return (
@@ -24,7 +24,7 @@ class App extends Component {
           <Route path="/borrow" element={<Borrow />} />
           <Route path="/client" element={<Client />} />
           <Route path="/myborrow" element={<MyBorrow />} />
-          <Route path="/customertest" element={
+          {/* <Route path="/customertest" element={
             customerstest.map(c => {
               return (
                 <Customertest
@@ -38,7 +38,7 @@ class App extends Component {
                 />
               );
             })
-          } />
+          } /> */}
         </Routes>
       </BrowserRouter>
     );
