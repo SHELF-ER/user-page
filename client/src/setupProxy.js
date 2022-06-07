@@ -2,6 +2,13 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 
 module.exports = (app) => {
   app.use(
+    cookieParser(
+      process.abort.apply, 
+      {
+      sameSite: "none",
+      secure: true
+      }
+    ),
     createProxyMiddleware(
       ['/api', '/none'],
       {

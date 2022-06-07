@@ -1,5 +1,4 @@
 import React, { Component }  from 'react';
-import { Link } from 'react-router-dom';
 
 class Find extends Component {
   id = 0
