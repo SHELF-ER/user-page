@@ -2,7 +2,7 @@ DROP SCHEMA IF EXISTS `testdb`;
 CREATE SCHEMA `testdb` DEFAULT CHARACTER SET utf8 ;
 use testdb;
 create table Member (
-       id bigint not null auto_increment,
+        id bigint not null auto_increment,
         bookNum varchar(255),
         borrower varchar(255),
         name varchar(255),
