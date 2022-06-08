@@ -17,7 +17,7 @@ function Borrow() {
         </div>
         <div className={commoncss.topnav}>
           <ul>
-            <li><Link to={'/'}><img src={homeicon} alt="home icon"/></Link></li>
+            <li><Link to={'/main'}><img src={homeicon} alt="home icon"/></Link></li>
             <li>&#10217;</li>
             <li><Link to={'/borrow'}>자료 검색</Link></li>
           </ul>
@@ -25,7 +25,7 @@ function Borrow() {
         <div className={commoncss.loginnav}>
           <ul>
             <li>○○○님,</li>
-            <li><Link to={'/'}>로그아웃</Link></li>
+            <li><Link to={'/main'}>로그아웃</Link></li>
           </ul>
           <Link to={'/client'}><img src={loginicon} alt="login icon"/></Link>
         </div>

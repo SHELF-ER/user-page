@@ -7,10 +7,10 @@ export default function Headertest() {
         <Link to="/">토익 영단어(고급)</Link>
       </h1>
       <div className="menu">
-        <a href="#" className="link">
+        <a href="frontend/src/components/Headertest#" className="link">
           단어 추가
         </a>
-        <a href="#" className="link">
+        <a href="frontend/src/components/Headertest#" className="link">
           Day 추가
         </a>
       </div>
