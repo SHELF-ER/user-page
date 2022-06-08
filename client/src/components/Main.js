@@ -16,7 +16,7 @@ function Main() {
       </header>
       <section className={maincss.main}>
         <h1><Link to={'/'} style={{ color: 'white' }}>&#128366;SHELF-ER</Link></h1>
-        <h3>로그인이 필요합니다. ID카드를 태그해주세요.</h3>
+        <h3><p className={maincss.p}>로그인이 필요합니다.</p><p className={maincss.p}> ID카드를 태그해주세요.</p></h3>
         <li class={maincss.selected}><a href="start.html">대  출</a></li>
         <li><a href="find.html">반  납</a></li>
       </section>
