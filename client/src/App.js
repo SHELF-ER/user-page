@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Paper from '@mui/material/Paper';
-import { Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
-import { withStyles } from '@mui/styles';
 import Main from './components/Main';
 import Borrow from './components/Borrow';
 import Client from './components/Client';
@@ -11,18 +8,8 @@ import Customer from './components/Customer';
 import ManagerMain from './components/ManagerMain';
 import Find from './components/Find';
 
-const styles = theme => ({
-  root: {
-    width: '100%',
-    marginTop: theme.spacing.unit * 3,
-    overflowX: "auto"
-  },
-  table: {
-    minWidth: 1080
-  }
-})
-
 class App extends Component {
+
   state = {
     customers: ""
   }
@@ -41,7 +28,6 @@ class App extends Component {
   }
 
   render() {
-    const { classes } = this.props;
     return (
       <BrowserRouter>
         <Routes>
@@ -50,19 +36,18 @@ class App extends Component {
           <Route path="/client" element={<Client />} />
           <Route path="/myborrow" element={<MyBorrow />} />
           <Route path="/customers" element={
-            <Paper className={classes.root}>
-              <Table className={classes.table}>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>번호</TableCell>
-                    <TableCell>이미지</TableCell>
-                    <TableCell>이름</TableCell>
-                    <TableCell>생년월일</TableCell>
-                    <TableCell>성별</TableCell>
-                    <TableCell>직업</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
+            <table>
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>이미지</th>
+                  <th>이름</th>
+                  <th>생년월일</th>
+                  <th>성별</th>
+                  <th>직업</th>
+                </tr>
+              </thead>
+              <tbody>
                 { this.state.customers ? this.state.customers.map(c => {
                   return (
                     <Customer
@@ -76,9 +61,8 @@ class App extends Component {
                     />
                   );
                 }) : <Customer/> }
-                </TableBody>
-              </Table>
-            </Paper>
+              </tbody>
+            </table>
           } />
           <Route path="/managermain" element={<ManagerMain />} />
           <Route path="/find" element={<Find />} />
@@ -88,4 +72,4 @@ class App extends Component {
   }
 }
 
-export default withStyles(styles)(App);
+export default App;
