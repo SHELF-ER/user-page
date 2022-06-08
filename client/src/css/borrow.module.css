@@ -81,3 +81,10 @@
 }
 
 /* content 끝 */
+
+/* 픽셀 줄어들 때 */
+@media ( max-width: 980px ) {
+    .Borrow {
+        width: 100%;
+    }
+}
