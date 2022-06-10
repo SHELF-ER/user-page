@@ -5,7 +5,7 @@ module.exports = (app) => {
     createProxyMiddleware(
       ['/api', '/none'],
       {
-        target: 'http://localhost:5000',
+        target: 'http://localhost:8080',
         changeOrigin: true,
         router: {
           '/none': process.env.REACT_APP_V2_URL
