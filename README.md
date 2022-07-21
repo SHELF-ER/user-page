@@ -1,6 +1,7 @@
 # User_page
-SHELF-ER의 사용자 페이지
-with React.js
+SHELF-ER의 사용자 페이지 with React.js \
+![졸업작품 요구사항 분석 기반 계획서](https://drive.google.com/file/d/1o8rLZHrfiXnAszL3Y0-c8qzcx453KfuF/view?usp=sharing) \
+![졸업작품 프로토타입 결과보고서](https://walnut-flyaway-f2b.notion.site/SHELF-ER-efe7fa28a57244c2a5e02852110ba9e4)
 
 # Getting Started with Create React App
 
