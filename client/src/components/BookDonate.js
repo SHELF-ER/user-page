@@ -2,8 +2,9 @@ import React  from 'react';
 import { post } from 'axios';
 import { Link } from 'react-router-dom';
 import mformcss from '../css/mform.module.css';
+import donateB from '../img/bookS.png';
 
-class CreateMemberForm extends React.Component {
+class BookDonate extends React.Component {
   //document.body.style.backgroundImage = 'none';
   //document.body.style.backgroundColor = 'white';
 
@@ -11,8 +12,7 @@ class CreateMemberForm extends React.Component {
 	super(props);
 	this.state = {
 		bookName: '',
-		bookNumber: '',
-		borrower: ''
+		bonor:''
 	}
 	this.handleFormSubmit = this.handleFormSubmit.bind(this)
 	this.handleValueChange = this.handleValueChange.bind(this)    
@@ -24,6 +24,13 @@ class CreateMemberForm extends React.Component {
 	this.addCustomer()
 	.then((response) => {
 		console.log(response.data);
+		if (response.data === "success"){
+			alert("도서 입력 성공");
+			var bookNameV = document.getElementById("bookName");
+			bookNameV.value='';
+			var bonorV = document.getElementById("bonor");
+			bonorV.value='';
+		}
 	})
   }
 
@@ -34,11 +41,10 @@ class CreateMemberForm extends React.Component {
   }
 
   addCustomer() {
-	const url='http://localhost:8080/members/new';
+	const url='http://localhost:8080/book/donate';
 	const formData = new FormData();
 	formData.append('name', this.state.bookName)
-	formData.append('bookNum', this.state.bookNumber)
-	formData.append('borrower', this.state.borrower)
+	formData.append('bonor', this.state.bonor)
 	const config = {
 		headers: {
 			'Access-Control-Allow-Origin': "*",
@@ -54,23 +60,22 @@ render() {
 			<div className={mformcss.container}>
 				<header className={mformcss.common}>
 					<div className={mformcss.subtitle}>
-						<h2><Link to={'/'} style={{ color: '#FFF' }}>HOME</Link></h2>
+						<h2><a href="http://localhost:8080/">home</a></h2>
 					</div>
 					<div className={mformcss.topnav}>
 						<ul>
 							<li style={{ color: '#FFF' }}>&#10217;</li>
-							<li><Link to={'/mform'}>회원 가입</Link></li>
+							<li><Link to={'/mform'}>도서 기부</Link></li>
 						</ul>
 					</div>
 				</header>
+				<img src={donateB} alt="도서 기부 기준"/>
 				<form onSubmit={this.handleFormSubmit}>
 					<div className={mformcss.formGroup}>
 						<label for="name">도서 제목</label>
-						<input type="text" id="bookName" name="bookName"  onChange={this.handleValueChange}  placeholder="제목을 입력하세요"/>
-						<label for="bookNum">도서 번호</label>
-						<input type="text" id="bookNumber" name="bookNumber" onChange={this.handleValueChange}  placeholder="번호를 입력하세요"/>
-						<label for="borrower">빌린 사람</label>
-						<input type="text" id="borrower" name="borrower" onChange={this.handleValueChange}  placeholder="이름을 입력하세요"/>
+						<input type="text" id="bookName" name="bookName"  onChange={this.handleValueChange}  placeholder="책 제목"/>
+						<label for="bonor">성함</label>
+						<input type="text" id="bonor" name="bonor" onChange={this.handleValueChange}  placeholder="기부 하시는 분 성함"/>
 					</div>
 					<button type="submit">등록</button>
 				</form>
@@ -81,4 +86,4 @@ render() {
 }
 }
 
-export default CreateMemberForm;
+export default BookDonate;
