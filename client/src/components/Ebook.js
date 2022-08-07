@@ -1,11 +1,10 @@
 import React  from 'react';
 import { Link } from 'react-router-dom';
 import ebookcss from '../css/index.module.css';
-import tableimg from '../img/wood.jpg';
+// import tableimg from '../img/wood.png';
 
 function Ebook() {
-	document.body.style.backgroundImage = "url(" + tableimg + ")";
-	
+	document.body.style.background = 'linear-gradient(#eee7c3,#e9e0ac)';
   return (
 		<div className="Ebook">
 			<section className={ebookcss.main}>

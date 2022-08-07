@@ -7,11 +7,6 @@
     padding: 0;
 }
 
-html {
-    width: 100%;
-    margin: 0 auto;
-}
-
 body {
     user-select: none;
     font-family: '맑은 고딕', '돋움', sans-serif;
