@@ -5,12 +5,13 @@ import mlistcss from '../css/mlist.module.css';
 function MemberList() {
 	document.body.style.backgroundImage = 'none';
   document.body.style.backgroundColor = 'white';
+	// document.a.style.color = 'white';
   return (
 	<div className="MamberList">
 		<div className={mlistcss.container}>
 			<header className={mlistcss.common}>
 				<div className={mlistcss.subtitle}>
-					  <h2><a href="http://localhost:8080/">home</a>.</h2>
+					  <h2><a href="http://localhost:8080/">HOME</a></h2>
 				</div>
 				<div className={mlistcss.topnav}>
 					<ul>

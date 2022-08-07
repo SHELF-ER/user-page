@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import mformcss from '../css/mform.module.css';
 
 class CreateMemberForm extends React.Component {
-  //document.body.style.backgroundImage = 'none';
-  //document.body.style.backgroundColor = 'white';
-
   constructor(props) {
 	super(props);
 	this.state = {
@@ -49,6 +46,8 @@ class CreateMemberForm extends React.Component {
   }
 
 render() {
+	document.body.style.backgroundImage = 'none';
+	document.body.style.backgroundColor = 'white';
 	return (
 		<div className="CreateMemberForm">
 			<div className={mformcss.container}>
@@ -76,7 +75,6 @@ render() {
 				</form>
 			</div>
 		</div>
-		
 	);
 }
 }
