@@ -5,7 +5,6 @@ import mlistcss from '../css/mlist.module.css';
 function MemberList() {
 	document.body.style.backgroundImage = 'none';
   document.body.style.backgroundColor = 'white';
-	// document.a.style.color = 'white';
   return (
 	<div className="MamberList">
 		<div className={mlistcss.container}>
