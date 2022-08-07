@@ -1,7 +1,7 @@
 import React  from 'react';
 import { post } from 'axios';
 import { Link } from 'react-router-dom';
-import mformcss from '../css/mform.module.css';
+import donatecss from '../css/donate.module.css';
 import donateB from '../img/bookS.png';
 
 class BookDonate extends React.Component {
@@ -57,12 +57,12 @@ class BookDonate extends React.Component {
 render() {
 	return (
 		<div className="CreateMemberForm">
-			<div className={mformcss.container}>
-				<header className={mformcss.common}>
-					<div className={mformcss.subtitle}>
-						<h2><a href="http://localhost:8080/">home</a></h2>
+			<div className={donatecss.container}>
+				<header className={donatecss.common}>
+					<div className={donatecss.subtitle}>
+						<h2><a href="http://localhost:8080/">HOME</a></h2>
 					</div>
-					<div className={mformcss.topnav}>
+					<div className={donatecss.topnav}>
 						<ul>
 							<li style={{ color: '#FFF' }}>&#10217;</li>
 							<li><Link to={'/mform'}>도서 기부</Link></li>
@@ -71,7 +71,7 @@ render() {
 				</header>
 				<img src={donateB} alt="도서 기부 기준"/>
 				<form onSubmit={this.handleFormSubmit}>
-					<div className={mformcss.formGroup}>
+					<div className={donatecss.formGroup}>
 						<label for="name">도서 제목</label>
 						<input type="text" id="bookName" name="bookName"  onChange={this.handleValueChange}  placeholder="책 제목"/>
 						<label for="bonor">성함</label>
