@@ -10,10 +10,10 @@ const AppRouter = () => {
       <BrowserRouter>
         <div style={style}>
           <Routes>
-            <Route exact path="/" element={<UserListComponent/>} />
-            <Route path="/users" element={<UserListComponent/>} />
-            <Route path="/add-user" element={<AddUserComponent/>} />
-            <Route path="/edit-user" element={<EditUserComponent/>} />
+            <Route exact path="/" element={<UserListComponent />} />
+            <Route path="/users" element={<UserListComponent />} />
+            <Route path="/add-user" element={<AddUserComponent />} />
+            <Route path="/edit-user" element={<EditUserComponent />} />
           </Routes>
         </div>
       </BrowserRouter>
@@ -22,8 +22,7 @@ const AppRouter = () => {
 };
 
 const style = {
-  color: "red",
-  margin: "10px",
+  marginTop: "20px",
 };
 
 export default AppRouter;

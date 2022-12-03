@@ -18,6 +18,10 @@ import ManagerMain from './components/ManagerMain';
 import Find from './components/Find';
 
 import AppRouter from './component/route/RouterComponent';
+import NavBar from "./component/route/NavBar";
+
+import Container from '@material-ui/core/Container';
+
 /*const styles = theme => ({
   root: {
     width: '100%',
@@ -62,7 +66,10 @@ function App() {
     
     return (
       <div>
-        <AppRouter />
+        <NavBar />
+        <Container>
+          <AppRouter />
+        </Container>
       </div>
       
       // <BrowserRouter>
