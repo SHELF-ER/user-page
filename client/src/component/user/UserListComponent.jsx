@@ -64,21 +64,21 @@ class UserListComponent extends Component{
           <thead>
             <tr>
               <th>ID</th>
-              <th>FistName</th>
-              <th>LastName</th>
-              <th>UserName</th>
-              <th>Age</th>
-              <th>Salary</th>
+              <th>password</th>
+              <th>Name</th>
+              <th>donate</th>
+              <th>borrow1</th>
+              <th>uid</th>
             </tr>
           </thead>
           <tbody>
             {this.state.users.map( user => 
               <tr key={user.id}>
-                <td>{user.firstName}</td>
-                <td>{user.lastName}</td>
-                <td>{user.username}</td>
-                <td>{user.age}</td>
-                <td>{user.salary}</td>
+                <td>{user.pw}</td>
+                <td>{user.name}</td>
+                <td>{user.donate}</td>
+                <td>{user.borrow1}</td>
+                <td>{user.uid}</td>
                 <td>
                   <button onClick={() => this.editUser(user.id)}>Edit</button>
                   <button onClick={() => this.deleteUser(user.id)}>Delete</button>
