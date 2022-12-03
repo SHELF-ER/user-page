@@ -5,10 +5,10 @@ import axios from 'axios';
 //import { Table, TableHead, TableBody, TableRow, TableCell } from '@mui/material';
 //import { withStyles } from '@mui/styles';
 import Home from './components/Home';
-import CreateMemberForm from './components/CreateMemberForm';
+// import CreateMemberForm from './components/CreateMemberForm';
 import MemberList from './components/MemberList';
 import Ebook from './components/Ebook';
-import BookDonate from './components/BookDonate';
+// import BookDonate from './components/BookDonate';
 import Main from './components/Main';
 import Borrow from './components/Borrow';
 import Client from './components/Client';
@@ -16,6 +16,9 @@ import MyBorrow from './components/MyBorrow';
 //import Customer from './components/Customer';
 import ManagerMain from './components/ManagerMain';
 import Find from './components/Find';
+import AppRouter from './component/route/RouterComponent.jsx';
+import NavBar from "./component/route/NavBar.jsx";
+import Container from '@material-ui/core/Container';
 
 /*const styles = theme => ({
   root: {
@@ -29,7 +32,15 @@ import Find from './components/Find';
 })*/
 
 function App() {
-
+    return (
+      <div>
+        <NavBar />
+        <Container>
+          <AppRouter />
+        </Container>
+      </div>
+    );
+  
   // state = {
   //   customers: ""
   // }
@@ -63,8 +74,8 @@ function App() {
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/mform" element={<CreateMemberForm />} />
-            <Route path="/donate" element={<BookDonate />} />
+            {/* <Route path="/mform" element={<CreateMemberForm />} /> */}
+            {/* <Route path="/donate" element={<BookDonate />} /> */}
             <Route path="/mlist" element={<MemberList />} />
             <Route path="/ebook" element={<Ebook />} />
             <Route path="/main" element={
