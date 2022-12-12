@@ -1,5 +1,5 @@
 # User_page
 SHELF-ER의 사용자 페이지 with React.js \
-[졸업작품 요구사항 분석 기반 계획서.ppt](https://drive.google.com/file/d/1o8rLZHrfiXnAszL3Y0-c8qzcx453KfuF/view?usp=sharing) \
-[졸업작품 프로토타입 결과보고서.ppt](https://drive.google.com/file/d/1o1NJf0Jblb2bd7tGn5KggebHxEVSzpB5/view?usp=sharing) \
-[졸업작품 프로토타입 최종보고서.hwp](https://drive.google.com/file/d/1uW8a0_5pKMdAtyOrN8LBvNCr_VocvrnE/view?usp=sharing)
+[SHELF-ER 결과보고서.pptx](https://bonjenny.notion.site/SHELF-ER-efe7fa28a57244c2a5e02852110ba9e4) \
+[SHELF-ER 최종보고서.pdf](https://drive.google.com/file/d/1r98SkpEC4b1SY-q87EKEPbV-yg5q9dGa/view?usp=sharing) \
+[SHELF-ER 요구사항 분석서.pptx](https://bonjenny.notion.site/SHELF-ER-35d94ec8e2cf45be9289499002658a5f)
